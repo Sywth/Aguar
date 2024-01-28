@@ -1,5 +1,5 @@
 {
-  "name": "agua",
+  "name": "aguar",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
@@ -16,6 +16,7 @@
     "build": "tsup",
     "start": "tsup && node dist/index.js"
   },
+  "bin": "./dist/index.js",
   "keywords": [
     "requests",
     "cli"

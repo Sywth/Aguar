@@ -1,4 +1,4 @@
-# Agua
+# aguar
 
 A simple cli tool for making requests through npx
 
@@ -7,13 +7,13 @@ A simple cli tool for making requests through npx
 - Make a http get request
 
 ```
-$ npx agua get https://stackoverflow.com/questions/244777/can-comments-be-used-in-json
+$ npx aguar get https://stackoverflow.com/questions/244777/can-comments-be-used-in-json
 ```
 
 - Or build a http get request
 
 ```
-$ npx agua
+$ npx aguar
 $ ? uri : https://stackoverflow.com/questions/244777/can-comments-be-used-in-json
 $ ❯ get
   post
