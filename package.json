@@ -1,6 +1,6 @@
 {
   "name": "aguar",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -37,6 +37,7 @@
   "dependencies": {
     "@types/inquirer": "^9.0.7",
     "inquirer": "^9.2.12",
+    "yargs": "^17.7.2",
     "yargs-parser": "^21.1.1"
   }
 }

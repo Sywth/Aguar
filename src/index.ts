@@ -133,6 +133,7 @@ const buildRequest = async ({
   while (!uri) {
     uri = await askUri();
   }
+  uri = fixUri(uri);
   if (!method) {
     method = await askMethod();
   }
