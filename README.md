@@ -10,7 +10,7 @@ A simple cli tool for making requests through npx
 
 - Or a post
 
-`npx aguar post localhost:3000 --t JSON --b { "roomId": 1, "players": ["Ajay","Mao","Xi"] }`
+`npx aguar post localhost:3000 --t JSON --b '{ "roomId": 1, "players": ["Ajay","Mao","Xi"] }'`
 
 - Or build a http get request
 
