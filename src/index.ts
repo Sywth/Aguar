@@ -106,9 +106,8 @@ const parseArguments = (processArgs: string[]): AguarProps => {
   const method = _method ? _method : undefined;
   const uri = _uri ? fixUri(_uri) : undefined;
 
-  let x = { method, uri, type, body };
-  console.log(x);
-  return x;
+  let response = { method, uri, type, body };
+  return response;
 };
 
 const validateHttpMethodType = (method: unknown): method is HttpMethod => {
@@ -145,7 +144,7 @@ const buildRequest = async ({
     );
   }
 
-  if (method === "GET") {
+  if (method.toLowerCase() === "get") {
     return { method, uri };
   }
 
