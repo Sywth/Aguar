@@ -1,4 +1,4 @@
-# aguar
+# Aguar
 
 A simple cli tool for making requests through npx
 
