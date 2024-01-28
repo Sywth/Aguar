@@ -2,6 +2,9 @@
 
 A simple cli tool for making requests through npx
 
+- **[GitHub](https://github.com/Sywth/Agua)**
+- **[NPM](https://www.google.com)**
+
 ## Usage
 
 - Make a http get request
