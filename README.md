@@ -3,7 +3,7 @@
 A simple cli tool for making requests through npx
 
 - **[GitHub](https://github.com/Sywth/Agua)**
-- **[NPM](https://www.google.com)**
+- **[NPM](https://www.npmjs.com/package/aguar)**
 
 ## Usage
 
