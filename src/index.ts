@@ -89,10 +89,6 @@ const parseArguments = (processArgs: string[]): AguarProps => {
     .option("type", {
       alias: "t",
       describe: "Specify the content type of the request payload",
-      coerce: (value) => value.toLowerCase(),
-      choices: displayContentType.map((contentType) =>
-        contentType.toLowerCase()
-      ),
     })
     .option("body", {
       alias: "b",
@@ -100,21 +96,26 @@ const parseArguments = (processArgs: string[]): AguarProps => {
     })
     .epilog("Made by @Sywth").argv;
 
-  const _method = argv._[0].toUpperCase();
+  const _method = argv._[0];
   const _uri = argv._[1];
   const _type = argv["type"];
   const _body = argv["body"];
 
   const type = _type ? coerceDisplayContentTypeToContentType(_type) : undefined;
   const body = _body ? (_body as string) : undefined;
-  const method = validateHttpMethodType(_method) ? _method : undefined;
+  const method = _method ? _method : undefined;
   const uri = _uri ? fixUri(_uri) : undefined;
 
-  return { method, uri, type, body };
+  let x = { method, uri, type, body };
+  console.log(x);
+  return x;
 };
 
 const validateHttpMethodType = (method: unknown): method is HttpMethod => {
-  return typeof method === "string" && httpMethods.includes(method as any);
+  return (
+    typeof method === "string" &&
+    httpMethods.map((m) => m.toLowerCase()).includes(method.toLowerCase())
+  );
 };
 
 const fixUri = (uri: string) => {
@@ -139,9 +140,13 @@ const buildRequest = async ({
   }
   if (!validateHttpMethodType(method)) {
     throw new Error(
-      `Unsupported method : "${method}".` +
+      `Unsupported method : "${method}". ` +
         `Select one from '${httpMethods.join("' | '")}'`
     );
+  }
+
+  if (method === "GET") {
+    return { method, uri };
   }
 
   if (type === undefined && body === undefined) {
