@@ -31,7 +31,7 @@ $ ❯ get
 Query mysterious hidden information 👻
 
 ```
-$ npm run dev
+$ npx aguar
 $ ? uri :  https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests_and_massacre
 $ ? method :  (Use arrow keys)
 $ ❯ GET
@@ -44,7 +44,7 @@ $ ❯ GET
 Example of the full console request experience
 
 ```
-$ npm run dev
+$ npx aguar
 $ ? uri :  https://jsonplaceholder.typicode.com/todos/1
 $ ? method :  PUT
 $ ? Add a payload (body) ? Yes
